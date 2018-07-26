@@ -49,13 +49,13 @@ ip_version = None
 
 try:
     public_ipv4 = urlopen(Request(
-        'http://ipv4.icanhazip.com/')).read().rstrip().decode('utf-8')
+        'http://api.ipify.org/')).read().rstrip().decode('utf-8')
 except URLError as e:
     print('* no public IPv4 address detected')
 
 try:
     public_ipv6 = urlopen(Request(
-        'http://ipv6.icanhazip.com/')).read().rstrip().decode('utf-8')
+        'http://api.ipify.org/')).read().rstrip().decode('utf-8')
 except URLError as e:
     print('* no public IPv6 address detected')
 
